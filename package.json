@@ -1,0 +1,38 @@
+{
+    "name": "datastar-decorator",
+    "displayName": "Datastar Decorator",
+    "description": "Displays a rocket icon next to Datastar attributes",
+    "version": "1.0.0",
+    "publisher": "eventintel",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "configuration": {
+            "title": "Datastar Decorator",
+            "properties": {
+                "datastarDecorator.enabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable/disable Datastar rocket decorations"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "pkg": "vsce package",
+        "publish": "vsce publish",
+        "test": "vsce package && cursor --install-extension datastar-decorator-1.0.0.vsix --force"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/eduwass/datastar-decorator"
+    }
+}
