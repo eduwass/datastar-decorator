@@ -131,9 +131,9 @@ function updateDecorations() {
   const decorations = [];
 
   // Create regex pattern for all Datastar attributes
-  // Matches: data-attr, data-bind:foo, data-on:click, etc.
+  // Matches: data-attr, data-bind:foo, data-on:click, data-on-blur, etc.
   const attributePattern = new RegExp(
-    `\\b(${DATASTAR_ATTRIBUTES.join('|')})(?::[\\w-]+)?(?:__[\\w.-]+)*\\s*=`,
+    `\\b(data-on-[\\w-]+|${DATASTAR_ATTRIBUTES.join('|')})(?::[\\w-]+)?(?:__[\\w.-]+)*\\s*=`,
     'gi'
   );
 
